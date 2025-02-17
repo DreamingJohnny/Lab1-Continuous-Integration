@@ -53,5 +53,19 @@ safari_submit_button = "xpath=/html/body/main/article[5]/section/form/button"
 #Removing from cart
 first_object_in_cart = "xpath=/html/body/main/article[6]/section/div/ul/li[1]/button"
 second_object_in_cart = "xpath=/html/body/main/article[6]/section/div/ul/li[2]/button"
+#Wille VG Variables
 
+#Ticket check variables
+vip_ticket_in_cart_spot =    "id=cart-details"
+vip_ticket_in_cart = "1 VIP Adult Ticket(s) - $100"
 
+#safari Check variables
+trex_rumble_in_cart = "T-Rex Rumble on"
+herbivor_in_cart = "Herbivore Tour on"
+herbivorplus_in_cart = "Herbivore Tour with Feeding"
+trex_rumbleplus_in_cart = "T-Rex Rumble eXtreme Thrill Pack"
+
+                       
+
+                       
+                       
