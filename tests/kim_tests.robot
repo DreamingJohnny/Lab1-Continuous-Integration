@@ -12,7 +12,7 @@ Test Teardown    Teardown Suite
 
 *** Test Cases ***
 Valid browser login
-    [Tags]    Johan-Ahlsten    refactor-me
+    [Tags]    Johan-Ahlsten    refactor-me    new-feature
     Click Specific Button    ${login_button}
 	Input Credentials    ${kim_username}    ${login_username_text_box}    ${kim_password}    ${login_password_text_box}
     Click Element    ${login_submit_button}
