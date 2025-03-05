@@ -3,11 +3,18 @@ Library    SeleniumLibrary
 Library    Collections
 Library    String
 
-Resource    login_and_registration_keywords.robot
-Resource    cart_keywords.robot
-Resource    ticket_and_safari_keywords.robot
+Resource    ${keywords_path}/login_and_registration_keywords.robot
+Resource    ${keywords_path}/cart_keywords.robot
+Resource    ${keywords_path}/ticket_and_safari_keywords.robot
 
-Variables    ../util/variables.py
+Variables    ${util_path}/variables.py
+
+*** Variables ***
+${html_path}    file://${EXECDIR}/website/jurap.html_path"
+${keywords_path}    ${EXECDIR}/resources/keyword_files
+${resource_path}    ${EXECDIR}/resources
+${util_path}    ${EXECDIR}/resources/util
+
 
 *** Keywords ***
 

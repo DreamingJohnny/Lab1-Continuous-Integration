@@ -3,7 +3,14 @@ Library    SeleniumLibrary
 Library    Collections
 Library    String
 
-Variables    ../util/variables.py
+Variables    ${util_path}/variables.py
+
+*** Variables ***
+${html_path}    file://${EXECDIR}/website/jurap.html_path"
+${keywords_path}    ${EXECDIR}/resources/keyword_files
+${resource_path}    ${EXECDIR}/resources
+${util_path}    ${EXECDIR}/resources/util
+
 
 *** Keywords ***
 

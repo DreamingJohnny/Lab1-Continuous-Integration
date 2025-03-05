@@ -29,13 +29,13 @@ Setup Suite Open Page
 Setup Suite Open Page And Register User
     [Documentation]    This setup opens browser to JurasStina-Kalle park home page and registers user.
     [Arguments]    ${username}    ${password}   
-    Open Browser     ${url_demo}    ${browser}    ${browser_new_options}    
+    Open Browser     ${html_path}    ${browser}    ${browser_new_options}    
     User Is Registered    ${username}    ${password}   
 
 Setup Suite Open Page Register And Login User
     [Documentation]    This setup opens browser to JurasStina-Kalle park home page, registers, and logs in user.
     [Arguments]    ${username}    ${password}   
-    Open Browser     ${url_demo}    ${browser}    ${browser_new_options}    
+    Open Browser     ${html_path}    ${browser}    ${browser_new_options}    
     User Is Registered    ${username}    ${password} 
     Log In User    ${username}    ${password} 
 

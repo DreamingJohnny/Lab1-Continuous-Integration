@@ -6,8 +6,8 @@
 
 Library    SeleniumLibrary
 
-Resource    ${resource_path}/keyword_files/keywords.robot
-Resource    ${resource_path}/keyword_files/pal_keywords.robot
+Resource    ${keywords_path}/keywords.robot
+Resource    ${keywords_path}/pal_keywords.robot
 
 Test Setup    Setup Suite Open Page
 Test Teardown    Teardown Suite
@@ -15,9 +15,12 @@ Test Teardown    Teardown Suite
 
 *** Variables ***
 
+
+*** Variables ***
+${html_path}    file://${EXECDIR}/website/jurap.html_path"
+${keywords_path}    ${EXECDIR}/resources/keyword_files
 ${resource_path}    ${EXECDIR}/resources
-
-
+${util_path}    ${EXECDIR}/resources/util
 
 *** Test Cases ***
 Register User Pal

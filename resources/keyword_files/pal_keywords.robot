@@ -8,9 +8,17 @@ Library    SeleniumLibrary
 Library    Collections
 Library    XML
 
-Resource    keywords.robot
+Resource    ${keywords_path}/keywords.robot
 
-Variables    ../util/pal_specific_variables.py
+Variables    ${util_path}/pal_specific_variables.py
+
+*** Variables ***
+${html_path}    file://${EXECDIR}/website/jurap.html_path"
+${keywords_path}    ${EXECDIR}/resources/keyword_files
+${resource_path}    ${EXECDIR}/resources
+${util_path}    ${EXECDIR}/resources/util
+
+
 
 *** Keywords ***
 

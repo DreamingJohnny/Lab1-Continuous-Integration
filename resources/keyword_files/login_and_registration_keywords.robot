@@ -4,9 +4,15 @@ Library    SeleniumLibrary
 Library    Collections
 Library    String
 
-Resource    button_and_navigation_keywords.robot
-Variables    ../util/variables.py
+Resource    ${keywords_path}/button_and_navigation_keywords.robot
+Variables    ${util_path}/variables.py
 
+
+*** Variables ***
+${html_path}    file://${EXECDIR}/website/jurap.html_path"
+${keywords_path}    ${EXECDIR}/resources/keyword_files
+${resource_path}    ${EXECDIR}/resources
+${util_path}    ${EXECDIR}/resources/util
 
 *** Keywords ***
 
