@@ -89,7 +89,7 @@ User That Is Not Logged In Can Not Book Safari
 
 User With Regular Ticket Can Not Book VIP Safari
     [Documentation]    This test verifies that an error message is displayed if user tries to book VIP safari without VIP ticket.
-    [Tags]    Kristin    new-feature
+    [Tags]    Kristin    
     Given User Is Logged In    ${valid_username}    ${valid_password}
     And Regular Entrance Ticket is Added To Cart
     When User books VIP safari
