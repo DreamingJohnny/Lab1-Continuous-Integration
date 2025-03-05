@@ -6,19 +6,23 @@
 
 Library    SeleniumLibrary
 
-Resource    ../resources/keyword_files/keywords.robot
-Resource    ../resources/keyword_files/pal_keywords.robot
-
-Variables    ../resources/util/variables.py
-Variables    ../resources/util/pal_specific_variables.py
+Resource    ${resource_path}/keyword_files/keywords.robot
+Resource    ${resource_path}/keyword_files/pal_keywords.robot
 
 Test Setup    Setup Suite Open Page
 Test Teardown    Teardown Suite
 
+
+*** Variables ***
+
+${resource_path}    ${EXECDIR}/resources
+
+
+
 *** Test Cases ***
 Register User Pal
     [Documentation]    This test verifies the registration process for user pal.
-    [Tags]    Kristin    Registration    Credentials    new-feature
+    [Tags]    Kristin    Registration    Credentials    pipeline-testing
     Given Page Is Opened To Registration Section
     When User Pal Enters Registration Credentials
     And User Presses Submit Registration Button

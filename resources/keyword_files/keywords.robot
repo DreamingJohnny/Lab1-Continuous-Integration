@@ -3,17 +3,20 @@ Library    SeleniumLibrary
 Library    Collections
 Library    String
 
-Resource    login_and_registration_keywords.robot
-Resource    cart_keywords.robot
-Resource    message_and_alert_keywords.robot
-Resource    ticket_and_safari_keywords.robot
-Resource    button_and_navigation_keywords.robot
-Resource    from_original_keywords.robot
+Resource    ${keywords_path}/login_and_registration_keywords.robot
+Resource    ${keywords_path}/cart_keywords.robot
+Resource    ${keywords_path}/message_and_alert_keywords.robot
+Resource    ${keywords_path}/ticket_and_safari_keywords.robot
+Resource    ${keywords_path}/button_and_navigation_keywords.robot
+Resource    ${keywords_path}/from_original_keywords.robot
 
-Variables    ../util/variables.py
+Variables    ${util_path}/variables.py
 
-
-
+*** Variables ***
+${html_path}    file://${EXECDIR}/website/jurap.html_path"
+${keywords_path}    ${EXECDIR}/resources/keyword_files
+${resource_path}    ${EXECDIR}/resources
+${util_path}    ${EXECDIR}/resources/util
 
 *** Keywords ***
 
@@ -21,18 +24,18 @@ Variables    ../util/variables.py
 
 Setup Suite Open Page
     [Documentation]    This setup opens browser to JurasStina-Kalle park home page.
-    Open Browser     ${url_demo}    ${browser}    ${browser_options}    
+    Open Browser     ${html_path}    ${browser}    ${browser_new_options}    
 
 Setup Suite Open Page And Register User
     [Documentation]    This setup opens browser to JurasStina-Kalle park home page and registers user.
     [Arguments]    ${username}    ${password}   
-    Open Browser     ${url_demo}    ${browser}    ${browser_options}    
+    Open Browser     ${url_demo}    ${browser}    ${browser_new_options}    
     User Is Registered    ${username}    ${password}   
 
 Setup Suite Open Page Register And Login User
     [Documentation]    This setup opens browser to JurasStina-Kalle park home page, registers, and logs in user.
     [Arguments]    ${username}    ${password}   
-    Open Browser     ${url_demo}    ${browser}    ${browser_options}    
+    Open Browser     ${url_demo}    ${browser}    ${browser_new_options}    
     User Is Registered    ${username}    ${password} 
     Log In User    ${username}    ${password} 
 

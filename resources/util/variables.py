@@ -3,6 +3,11 @@ import tempfile
 
 current_directory = os.getcwd().replace('\\', '/')
 
+
+html_path = "file://${EXECDIR}/website/jurap.html_path"
+resource_path = "${EXECDIR}/resources"
+browser_new_options = "--headless"
+
 #Site specifics
 temp_dir = tempfile.mkdtemp()
 browser = "headlesschrome"

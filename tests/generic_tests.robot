@@ -1,15 +1,22 @@
 *** Settings ***
 Library    SeleniumLibrary
 
-Resource    ../resources/keyword_files/keywords.robot
-Resource    ../resources/keyword_files/from_original_keywords.robot
-Variables    ../resources/util/variables.py
+Resource    ${keywords_path}/keywords.robot
+Resource    ${keywords_path}/from_original_keywords.robot
+Variables   ${util_path}/variables.py
 
 Documentation   Grupp 2 Wille, Johan och Kristin. Generic test suite for general test functions as a base library.
 
 #Test setup that starts up the page in a browser and registers a user. (by Wille)
 Test Setup    Setup Suite Open Page And Register User    ${valid_username}    ${valid_password}
 Test Teardown    Teardown Suite 
+
+*** Variables ***
+${html_path}    file://${EXECDIR}/website/jurap.html_path"
+${keywords_path}    ${EXECDIR}/resources/keyword_files
+${resource_path}    ${EXECDIR}/resources
+${util_path}    ${EXECDIR}/resources/util
+
 
 *** Test Cases ***
 #Invalid login test to see if the page need correct credentials.
