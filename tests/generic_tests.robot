@@ -75,7 +75,7 @@ User Can Not Register Username That Already Exists
 
 User That Is Not Logged In Can Not Add Ticket To Cart
     [Documentation]    This test verifies that an error alert is displayed if user that is not logged in tries to buy entrance ticket. 
-    [Tags]    Kristin    
+    [Tags]    Kristin    pipeline-testing    
     Given No one is logged in
     When User Buys Ticket
     Then User Should Recieve Alert    ${ticket_login_error_message}
