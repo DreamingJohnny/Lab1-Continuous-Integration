@@ -1,0 +1,21 @@
+trigger:
+  branches:
+    include:
+      - pipeline-testing/*
+
+    exclude:
+      - main
+      - develop
+      - feature
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+
+  - template: templates/install-dependencies.yaml
+
+  - script:
+      robot --include pipeline-testing --output results/logs/output_feature_test.xml --log results/logs/log_feature_test.html --report results/logs/report_feature_test.html tests/
+    displayName: 'Run Tests tagged with pipeline-testing'
+
