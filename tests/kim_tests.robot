@@ -12,21 +12,21 @@ Test Teardown    Teardown Suite
 
 *** Test Cases ***
 Valid browser login
-    [Tags]    Johan-Ahlsten    new-feature    refactor-me
+    [Tags]    Johan-Ahlsten    refactor-me
     Click Specific Button    ${login_button}
 	Input Credentials    ${kim_username}    ${login_username_text_box}    ${kim_password}    ${login_password_text_box}
     Click Element    ${login_submit_button}
 	Sleep    3
 
 User sees the correct price total on tickets in cart
-    [Tags]    Johan-Ahlsten    new-feature    refactor-me
+    [Tags]    Johan-Ahlsten    refactor-me
     Given The User Is Logged In To Their Account    ${login_button}    ${kim_username}    ${kim_password}    
 	...    ${login_username_text_box}    ${login_password_text_box}    ${login_submit_button}
     When The User Kim Buys Tickets For Their Family
     Then The The Total Price Is Correct    ${cart_tab_xpath}    ${kim_expected_ticket_cost_total}    ${cart_total_xpath}
 
 User purchase tickets for their family
-    [Tags]    Johan-Ahlsten    new-feature    refactor-me
+    [Tags]    Johan-Ahlsten    refactor-me
     Given The User Is Logged In To Their Account    ${login_button}    ${kim_username}    ${kim_password}    
 	...    ${login_username_text_box}    ${login_password_text_box}    ${login_submit_button}
     When The User Kim Buys Tickets For Their Family
@@ -34,7 +34,7 @@ User purchase tickets for their family
 	Then The Price In The Popup Is Correct    ${kim_expected_ticket_cost_total}
 
 User books weekend safaris for their family
-    [Tags]    Johan-Ahlsten    new-feature    refactor-me
+    [Tags]    Johan-Ahlsten    refactor-me
     Given The User Is Logged In To Their Account    ${login_button}    ${kim_username}    ${kim_password}    
 	...    ${login_username_text_box}    ${login_password_text_box}    ${login_submit_button}
 	And The User Kim Buys Tickets For Their Family
@@ -43,7 +43,7 @@ User books weekend safaris for their family
 	...    ${safari_type_t_rex_rumble_thrill}    ${kim_expected_safari_date}
 
 User purchases weekend safaris for their family
-    [Tags]    Johan-Ahlsten    new-feature    refactor-me
+    [Tags]    Johan-Ahlsten    refactor-me
     Given The User Is Logged In To Their Account    ${login_button}    ${kim_username}    ${kim_password}    
 	...    ${login_username_text_box}    ${login_password_text_box}    ${login_submit_button}
 	And The User Kim Buys Tickets For Their Family

@@ -10,7 +10,7 @@ Library    XML
 
 Resource    keywords.robot
 
-Variables    ../resources/util/pal_specific_variables.py
+Variables    ../util/pal_specific_variables.py
 
 *** Keywords ***
 

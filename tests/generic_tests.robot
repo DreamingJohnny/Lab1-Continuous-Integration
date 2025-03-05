@@ -68,7 +68,7 @@ Removing object from cart
 
 User Can Not Register Username That Already Exists
     [Documentation]    This test verifies that an error message is displayed if user tries to register an already registered username.
-    [Tags]    Kristin    new-feature
+    [Tags]    Kristin
     Given User Is Registered    ${valid_username}    ${valid_password}
     When User Registers Username    ${valid_username}    ${valid_password}
     Then User Should Get Message That Username Already Exists    
