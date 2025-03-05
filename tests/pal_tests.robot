@@ -26,7 +26,7 @@ Register User Pal
     
 Log In User Pal
     [Documentation]    This test verifies the login process for user pal.
-    [Tags]    Kristin    Login    Credentials
+    [Tags]    Kristin    Login    Credentials    kristins-lekstuga
     Given User Pal Is Registered
     And Page Is Opened To Login Page
     And No One Is Logged In
